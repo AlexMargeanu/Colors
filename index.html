@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+        <title></title>
+</head>
+
+<body>
+  <p>Hello the mouse is on x:<span id="x"></span> y:<span id="y"></span></p>
+  
+  
+  
+  <script>
+  console.log(changeColor)
+  document.body.addEventListener(
+   "mousemove",
+    function(event) {
+      const x = event.clientX
+      const y = event.clientY
+      document.getElementById("x").innerText = x
+      document.getElementById("y").innerText = y
+  
+      
+      changeColor(x, y)
+    }
+  )
+    
+  function changeColor(x, y) {
+    const viewport_width = window.innerWidth;
+    const viewport_height = window.innerHeight;
+    let widthPercentage = x / viewport_width;
+    let heightPercentage = y / viewport_height;
+    console.log(widthPercentage + "" + heightPercentage)
+    let aux_X = widthPercentage * 360;
+    let aux_Y = heightPercentage * 360;
+    
+    let cssRule = `hsl(${aux_X}, ${aux_Y}%, 50%)`
+    
+     document.body.style.background = cssRule;
+  }
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="">
