@@ -16,7 +16,7 @@ class Car {
 car1 = new Car ("Seat", "Whatever", "Blue", false, true);
 car2 = new Car ("Volvo", "V1", "Green", false, false);
 
-car3 = new Car ("Dacia", "Logan", "Green", false, true);
+car3 = new Car ("Peugeot", "Caca", "Green", false, true);
 
 #loren Ipsum bla bla bla
 
